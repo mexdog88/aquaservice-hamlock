@@ -32,8 +32,8 @@ Cloudflare Turnstile + Vercel Function + Resend. Setup nach dem Vercel-Connect:
 Erwartete Dateien in `assets/` (Namen exakt so):
 
 - `hero-pool.jpg` – Schwimmhalle (Hero, rechts)
-- `schwimmer.jpg` – Schwimmer im Becken (Bild-Band, links)
-- `schwimmbahn.jpg` – Sonniges Becken mit Bahnen (Bild-Band, rechts)
+- `schwimmer.jpg` – Schwimmer im Becken (Bild-Band)
+- `schwimmbahn.jpg` – Sonniges Becken mit Bahnen (Kontakt-Sektion, neben dem Formular)
 - `wasser-textur.jpg` – Wasseroberfläche (Hintergrund Über-Sektion)
 
 Vor dem Push idealerweise auf ~1600 px Breite verkleinern und komprimieren.

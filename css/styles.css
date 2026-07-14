@@ -316,24 +316,12 @@ h2 {
 
 .image-band {
   padding-block: 0;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
 }
 
 .image-band img {
   width: 100%;
   height: clamp(14rem, 38vw, 24rem);
   object-fit: cover;
-}
-
-@media (max-width: 47rem) {
-  .image-band {
-    grid-template-columns: 1fr;
-  }
-
-  .image-band img {
-    height: clamp(11rem, 45vw, 16rem);
-  }
 }
 
 /* --- Über ------------------------------------------------------------------ */
@@ -357,6 +345,32 @@ h2 {
 }
 
 /* --- Kontakt ----------------------------------------------------------------- */
+
+.contact-grid {
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: var(--space-5);
+  align-items: start;
+}
+
+.contact-media img {
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-lg);
+  aspect-ratio: 4 / 5;
+  object-fit: cover;
+  width: 100%;
+}
+
+@media (max-width: 56rem) {
+  .contact-grid {
+    grid-template-columns: 1fr;
+    gap: var(--space-4);
+  }
+
+  .contact-media img {
+    aspect-ratio: 16 / 10;
+  }
+}
 
 .contact form {
   display: grid;

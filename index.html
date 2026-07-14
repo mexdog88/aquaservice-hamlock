@@ -98,7 +98,6 @@
   <!-- Bild-Band -->
   <section class="image-band">
     <img src="assets/schwimmer.jpg" alt="Schwimmer ziehen Bahnen im Sportbecken" width="1600" height="700" loading="lazy">
-    <img src="assets/schwimmbahn.jpg" alt="Sonnendurchflutetes Sportbecken mit Schwimmbahnen" width="1600" height="700" loading="lazy">
   </section>
 
   <!-- 4. Ablauf -->
@@ -142,10 +141,12 @@
   <!-- 6. Kontakt -->
   <section class="contact" id="kontakt">
     <div class="container">
-      <span class="kicker">Kontakt</span>
-      <h2>Melden Sie Ihren Bedarf.</h2>
-      <p style="margin-bottom: var(--space-3); color: var(--color-ink-soft);">Unverbindlich. Rückmeldung noch am selben Tag.</p>
-      <form id="kontakt-form" action="/api/contact" method="post">
+      <div class="contact-grid">
+        <div>
+          <span class="kicker">Kontakt</span>
+          <h2>Melden Sie Ihren Bedarf.</h2>
+          <p style="margin-bottom: var(--space-3); color: var(--color-ink-soft);">Unverbindlich. Rückmeldung noch am selben Tag.</p>
+          <form id="kontakt-form" action="/api/contact" method="post">
         <div>
           <label for="bad">Bad / Einrichtung</label>
           <input type="text" id="bad" name="bad" required>
@@ -166,8 +167,13 @@
         <div class="cf-turnstile" data-sitekey="TURNSTILE_SITEKEY_HIER"></div>
         <button class="btn" type="submit">Anfrage senden</button>
         <p id="form-status" role="status"></p>
-      </form>
-      <p class="direct">Oder direkt: <a class="link-phone" href="tel:+490000000000">0000&nbsp;000&nbsp;0000</a> · <a class="link-phone" href="mailto:kontakt@example.de">kontakt@example.de</a></p>
+          </form>
+          <p class="direct">Oder direkt: <a class="link-phone" href="tel:+490000000000">0000&nbsp;000&nbsp;0000</a> · <a class="link-phone" href="mailto:kontakt@example.de">kontakt@example.de</a></p>
+        </div>
+        <div class="contact-media">
+          <img src="assets/schwimmbahn.jpg" alt="Sonnendurchflutetes Sportbecken mit Schwimmbahnen" width="800" height="1000" loading="lazy">
+        </div>
+      </div>
     </div>
   </section>
 
