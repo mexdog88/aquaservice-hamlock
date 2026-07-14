@@ -1,18 +1,19 @@
 /* ==========================================================================
    Design-Tokens – Aquaservice Hamlock
-   Single Source of Truth fürs Design. Nur hier Farben/Typo/Spacing ändern.
+   Richtung: Hell & klar. Weiß/helles Grau, tiefes Petrol als Akzent,
+   viel Weißraum, große Typo. Nur hier Farben/Typo/Spacing ändern.
    ========================================================================== */
 
 :root {
-  /* Farben – Startpunkt, im Design-Adjustment verfeinern */
-  --color-bg: #fafbfc;
+  /* Farben */
+  --color-bg: #f7f9fa;
   --color-surface: #ffffff;
-  --color-ink: #10222e;          /* Haupttext, dunkles Petrol-Schwarz */
-  --color-ink-soft: #4a5c68;     /* Sekundärtext */
-  --color-primary: #0e6e8c;      /* Tiefes Wasser-Petrol, nicht Standard-Blau */
-  --color-primary-dark: #0a5269;
-  --color-accent: #e8f3f7;       /* Helle Flächen / Karten-Hintergrund */
-  --color-line: #dde5ea;
+  --color-ink: #0d1f2a;          /* Haupttext */
+  --color-ink-soft: #51626e;     /* Sekundärtext */
+  --color-primary: #0b6a88;      /* Tiefes Petrol */
+  --color-primary-dark: #084f66;
+  --color-accent: #eaf4f8;       /* Helle Petrol-Fläche */
+  --color-line: #e0e8ec;
 
   /* Typografie */
   --font-sans: "Inter", system-ui, -apple-system, "Segoe UI", sans-serif;
@@ -20,10 +21,10 @@
   --text-sm: 0.9375rem;
   --text-base: 1.0625rem;
   --text-lg: 1.25rem;
-  --text-xl: 1.625rem;
-  --text-2xl: clamp(2rem, 5vw, 3rem);   /* Hero */
-  --leading-tight: 1.15;
-  --leading-normal: 1.6;
+  --text-xl: clamp(1.5rem, 3vw, 2rem);
+  --text-2xl: clamp(2.125rem, 5vw, 3.25rem);   /* Hero */
+  --leading-tight: 1.12;
+  --leading-normal: 1.65;
 
   /* Spacing */
   --space-1: 0.5rem;
@@ -31,10 +32,13 @@
   --space-3: 1.5rem;
   --space-4: 2.5rem;
   --space-5: 4rem;
-  --space-6: 6.5rem;   /* Sektionsabstand */
+  --space-6: clamp(4rem, 9vw, 7rem);   /* Sektionsabstand */
 
   /* Layout */
-  --max-width: 68rem;
-  --radius: 0.75rem;
-  --shadow: 0 2px 16px rgba(16, 34, 46, 0.07);
+  --max-width: 70rem;
+  --radius: 0.875rem;
+  --radius-lg: 1.5rem;
+  --shadow: 0 2px 18px rgba(13, 31, 42, 0.07);
+  --shadow-lg: 0 12px 40px rgba(13, 31, 42, 0.12);
+  --header-height: 4.25rem;
 }

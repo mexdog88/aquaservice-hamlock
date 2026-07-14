@@ -5,28 +5,56 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Aquaservice Hamlock – Schwimmbadpersonal im Großraum München</title>
   <meta name="description" content="Flexible Rettungsschwimmer und Badpersonal für Bäderbetriebe im Umkreis von 100 km um Fürstenfeldbruck. Ab einzelnen Schichten, ohne langfristige Verpflichtung.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/tokens.css">
   <link rel="stylesheet" href="css/styles.css">
   <script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
 </head>
 <body>
 
-  <!-- 1. Hero -->
-  <section class="hero">
+  <!-- Navigation -->
+  <header class="site-header">
     <div class="container">
-      <h1>Schichtlücke im Bad? Morgen steht jemand am Becken.</h1>
-      <p class="subline">Flexible Rettungsschwimmer und Badpersonal für Bäderbetriebe im Großraum München – ab einzelnen Schichten, ohne langfristige Verpflichtung.</p>
-      <div class="cta-row">
+      <a class="brand" href="#top">Aquaservice <span>Hamlock</span></a>
+      <button class="nav-toggle" aria-label="Menü öffnen" aria-expanded="false" aria-controls="nav">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </button>
+      <nav class="nav" id="nav">
+        <a href="#leistungen">Leistungen</a>
+        <a href="#ablauf">Ablauf</a>
+        <a href="#ueber">Über</a>
+        <a href="#kontakt">Kontakt</a>
         <a class="btn" href="#kontakt">Bedarf melden</a>
-        <a class="link-phone" href="tel:+490000000000">Direkt anrufen: 0000&nbsp;000&nbsp;0000</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- 1. Hero -->
+  <section class="hero" id="top">
+    <div class="container">
+      <div>
+        <h1>Schichtlücke im Bad? Morgen steht jemand am Becken.</h1>
+        <p class="subline">Flexible Rettungsschwimmer und Badpersonal für Bäderbetriebe im Großraum München – ab einzelnen Schichten, ohne langfristige Verpflichtung.</p>
+        <div class="cta-row">
+          <a class="btn" href="#kontakt">Bedarf melden</a>
+          <a class="link-phone" href="tel:+490000000000">Direkt anrufen: 0000&nbsp;000&nbsp;0000</a>
+        </div>
+        <p class="trust">DRSA Silber&ensp;·&ensp;Erste-Hilfe-Nachweis&ensp;·&ensp;Einsatzbereit im Umkreis von 100&nbsp;km um Fürstenfeldbruck</p>
       </div>
-      <p class="trust">DRSA Silber&ensp;·&ensp;Erste-Hilfe-Nachweis&ensp;·&ensp;Einsatzbereit im Umkreis von 100&nbsp;km um Fürstenfeldbruck</p>
+      <div class="hero-media">
+        <img src="assets/hero-pool.jpg" alt="Schwimmhalle mit Sportbecken und Bahnenleinen" width="800" height="1000">
+      </div>
     </div>
   </section>
 
   <!-- 2. Problem -->
   <section class="problem">
     <div class="container">
+      <span class="kicker">Die Ausgangslage</span>
       <h2>Die Lage kennen Sie.</h2>
       <div class="cards">
         <div class="card">
@@ -46,8 +74,9 @@
   </section>
 
   <!-- 3. Leistungen -->
-  <section class="services">
+  <section class="services" id="leistungen">
     <div class="container">
+      <span class="kicker">Leistungen</span>
       <h2>Personal, wenn Sie es brauchen.</h2>
       <div class="cards">
         <div class="card">
@@ -66,9 +95,16 @@
     </div>
   </section>
 
+  <!-- Bild-Band -->
+  <section class="image-band">
+    <img src="assets/schwimmer.jpg" alt="Schwimmer ziehen Bahnen im Sportbecken" width="1600" height="700" loading="lazy">
+    <img src="assets/schwimmbahn.jpg" alt="Sonnendurchflutetes Sportbecken mit Schwimmbahnen" width="1600" height="700" loading="lazy">
+  </section>
+
   <!-- 4. Ablauf -->
-  <section class="steps">
+  <section class="steps" id="ablauf">
     <div class="container">
+      <span class="kicker">So funktioniert's</span>
       <h2>Ein Anruf genügt.</h2>
       <div class="cards">
         <div class="card">
@@ -91,8 +127,9 @@
   </section>
 
   <!-- 5. Über -->
-  <section class="about">
+  <section class="about" id="ueber">
     <div class="container">
+      <span class="kicker">Über</span>
       <h2>Der Gründer steht selbst am Becken.</h2>
       <blockquote>
         Ich vermittle nicht nur – ich bin selbst operativ im Einsatz und übernehme bei Bedarf persönlich Schichten. So weiß ich, was am Beckenrand zählt, und stehe für die Qualität jedes Einsatzes gerade.
@@ -105,6 +142,7 @@
   <!-- 6. Kontakt -->
   <section class="contact" id="kontakt">
     <div class="container">
+      <span class="kicker">Kontakt</span>
       <h2>Melden Sie Ihren Bedarf.</h2>
       <p style="margin-bottom: var(--space-3); color: var(--color-ink-soft);">Unverbindlich. Rückmeldung noch am selben Tag.</p>
       <form id="kontakt-form" action="/api/contact" method="post">
@@ -129,29 +167,6 @@
         <button class="btn" type="submit">Anfrage senden</button>
         <p id="form-status" role="status"></p>
       </form>
-      <script>
-        document.getElementById('kontakt-form').addEventListener('submit', async (e) => {
-          e.preventDefault();
-          const form = e.target;
-          const status = document.getElementById('form-status');
-          status.textContent = 'Wird gesendet …';
-          try {
-            const res = await fetch('/api/contact', {
-              method: 'POST',
-              body: new FormData(form),
-            });
-            if (res.ok) {
-              form.reset();
-              if (window.turnstile) turnstile.reset();
-              status.textContent = 'Danke! Ihre Anfrage ist eingegangen – wir melden uns noch heute.';
-            } else {
-              status.textContent = 'Senden fehlgeschlagen. Rufen Sie uns gerne direkt an.';
-            }
-          } catch {
-            status.textContent = 'Senden fehlgeschlagen. Rufen Sie uns gerne direkt an.';
-          }
-        });
-      </script>
       <p class="direct">Oder direkt: <a class="link-phone" href="tel:+490000000000">0000&nbsp;000&nbsp;0000</a> · <a class="link-phone" href="mailto:kontakt@example.de">kontakt@example.de</a></p>
     </div>
   </section>
@@ -162,6 +177,48 @@
       <span><a href="#">Impressum</a> · <a href="#">Datenschutz</a></span>
     </div>
   </footer>
+
+  <script>
+    // Hamburger-Navigation (mobil)
+    const toggle = document.querySelector('.nav-toggle');
+    const nav = document.getElementById('nav');
+    toggle.addEventListener('click', () => {
+      const open = nav.classList.toggle('open');
+      document.body.classList.toggle('nav-open', open);
+      toggle.setAttribute('aria-expanded', open);
+    });
+    // Menü schließen nach Anker-Klick
+    nav.querySelectorAll('a').forEach((a) =>
+      a.addEventListener('click', () => {
+        nav.classList.remove('open');
+        document.body.classList.remove('nav-open');
+        toggle.setAttribute('aria-expanded', 'false');
+      })
+    );
+
+    // Kontaktformular
+    document.getElementById('kontakt-form').addEventListener('submit', async (e) => {
+      e.preventDefault();
+      const form = e.target;
+      const status = document.getElementById('form-status');
+      status.textContent = 'Wird gesendet …';
+      try {
+        const res = await fetch('/api/contact', {
+          method: 'POST',
+          body: new FormData(form),
+        });
+        if (res.ok) {
+          form.reset();
+          if (window.turnstile) turnstile.reset();
+          status.textContent = 'Danke! Ihre Anfrage ist eingegangen – wir melden uns noch heute.';
+        } else {
+          status.textContent = 'Senden fehlgeschlagen. Rufen Sie uns gerne direkt an.';
+        }
+      } catch {
+        status.textContent = 'Senden fehlgeschlagen. Rufen Sie uns gerne direkt an.';
+      }
+    });
+  </script>
 
 </body>
 </html>

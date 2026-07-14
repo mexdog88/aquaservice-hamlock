@@ -27,6 +27,17 @@ Cloudflare Turnstile + Vercel Function + Resend. Setup nach dem Vercel-Connect:
 2. Sitekey in `index.html` einsetzen (`TURNSTILE_SITEKEY_HIER`)
 3. In Vercel drei Env-Variablen setzen: `TURNSTILE_SECRET_KEY`, `RESEND_API_KEY`, `CONTACT_EMAIL`
 
+## Bilder
+
+Erwartete Dateien in `assets/` (Namen exakt so):
+
+- `hero-pool.jpg` – Schwimmhalle (Hero, rechts)
+- `schwimmer.jpg` – Schwimmer im Becken (Bild-Band, links)
+- `schwimmbahn.jpg` – Sonniges Becken mit Bahnen (Bild-Band, rechts)
+- `wasser-textur.jpg` – Wasseroberfläche (Hintergrund Über-Sektion)
+
+Vor dem Push idealerweise auf ~1600 px Breite verkleinern und komprimieren.
+
 ## Offene Punkte
 
 - [ ] Telefonnummer + E-Mail einsetzen (Platzhalter `0000 000 0000` / `kontakt@example.de`)
