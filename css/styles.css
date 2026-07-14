@@ -1,0 +1,206 @@
+/* ==========================================================================
+   Styles – Aquaservice Hamlock Onepager
+   Nutzt ausschließlich Tokens aus tokens.css.
+   ========================================================================== */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-sans);
+  font-size: var(--text-base);
+  line-height: var(--leading-normal);
+  color: var(--color-ink);
+  background: var(--color-bg);
+}
+
+.container {
+  max-width: var(--max-width);
+  margin-inline: auto;
+  padding-inline: var(--space-3);
+}
+
+section {
+  padding-block: var(--space-6);
+}
+
+h1, h2, h3 {
+  line-height: var(--leading-tight);
+}
+
+h2 {
+  font-size: var(--text-xl);
+  margin-bottom: var(--space-4);
+}
+
+/* --- Buttons ------------------------------------------------------------ */
+
+.btn {
+  display: inline-block;
+  padding: 0.875rem 1.75rem;
+  border-radius: var(--radius);
+  background: var(--color-primary);
+  color: #fff;
+  font-weight: 600;
+  text-decoration: none;
+  transition: background 0.15s ease;
+}
+
+.btn:hover {
+  background: var(--color-primary-dark);
+}
+
+.link-phone {
+  color: var(--color-primary);
+  font-weight: 600;
+  text-decoration: none;
+}
+
+/* --- Hero ----------------------------------------------------------------- */
+
+.hero {
+  padding-block: var(--space-6) var(--space-5);
+  text-align: center;
+}
+
+.hero h1 {
+  font-size: var(--text-2xl);
+  max-width: 40ch;
+  margin-inline: auto;
+}
+
+.hero .subline {
+  font-size: var(--text-lg);
+  color: var(--color-ink-soft);
+  max-width: 52ch;
+  margin: var(--space-3) auto var(--space-4);
+}
+
+.hero .cta-row {
+  display: flex;
+  gap: var(--space-3);
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.hero .trust {
+  margin-top: var(--space-3);
+  font-size: var(--text-xs);
+  color: var(--color-ink-soft);
+}
+
+/* --- Karten (Problem / Leistungen / Schritte) ----------------------------- */
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+  gap: var(--space-3);
+}
+
+.card {
+  background: var(--color-surface);
+  border: 1px solid var(--color-line);
+  border-radius: var(--radius);
+  padding: var(--space-3);
+  box-shadow: var(--shadow);
+}
+
+.card h3 {
+  font-size: var(--text-base);
+  margin-bottom: var(--space-1);
+}
+
+.card p {
+  font-size: var(--text-sm);
+  color: var(--color-ink-soft);
+}
+
+.step-number {
+  display: inline-flex;
+  width: 2rem;
+  height: 2rem;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background: var(--color-primary);
+  color: #fff;
+  font-weight: 700;
+  font-size: var(--text-sm);
+  margin-bottom: var(--space-1);
+}
+
+/* --- Über ------------------------------------------------------------------ */
+
+.about {
+  background: var(--color-accent);
+}
+
+.about blockquote {
+  max-width: 60ch;
+  font-size: var(--text-lg);
+  border-left: 3px solid var(--color-primary);
+  padding-left: var(--space-3);
+}
+
+.about .signature {
+  margin-top: var(--space-2);
+  font-weight: 600;
+}
+
+/* --- Kontakt ----------------------------------------------------------------- */
+
+.contact form {
+  display: grid;
+  gap: var(--space-2);
+  max-width: 32rem;
+}
+
+.contact label {
+  font-size: var(--text-sm);
+  font-weight: 600;
+}
+
+.contact input,
+.contact textarea {
+  width: 100%;
+  padding: 0.75rem;
+  border: 1px solid var(--color-line);
+  border-radius: var(--radius);
+  font: inherit;
+  background: var(--color-surface);
+}
+
+.contact .direct {
+  margin-top: var(--space-3);
+  color: var(--color-ink-soft);
+  font-size: var(--text-sm);
+}
+
+/* --- Footer ------------------------------------------------------------------ */
+
+footer {
+  border-top: 1px solid var(--color-line);
+  padding-block: var(--space-3);
+  font-size: var(--text-xs);
+  color: var(--color-ink-soft);
+}
+
+footer .container {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: var(--space-2);
+}
+
+footer a {
+  color: inherit;
+}

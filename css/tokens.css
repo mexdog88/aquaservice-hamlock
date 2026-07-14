@@ -1,0 +1,40 @@
+/* ==========================================================================
+   Design-Tokens – Aquaservice Hamlock
+   Single Source of Truth fürs Design. Nur hier Farben/Typo/Spacing ändern.
+   ========================================================================== */
+
+:root {
+  /* Farben – Startpunkt, im Design-Adjustment verfeinern */
+  --color-bg: #fafbfc;
+  --color-surface: #ffffff;
+  --color-ink: #10222e;          /* Haupttext, dunkles Petrol-Schwarz */
+  --color-ink-soft: #4a5c68;     /* Sekundärtext */
+  --color-primary: #0e6e8c;      /* Tiefes Wasser-Petrol, nicht Standard-Blau */
+  --color-primary-dark: #0a5269;
+  --color-accent: #e8f3f7;       /* Helle Flächen / Karten-Hintergrund */
+  --color-line: #dde5ea;
+
+  /* Typografie */
+  --font-sans: "Inter", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --text-xs: 0.8125rem;
+  --text-sm: 0.9375rem;
+  --text-base: 1.0625rem;
+  --text-lg: 1.25rem;
+  --text-xl: 1.625rem;
+  --text-2xl: clamp(2rem, 5vw, 3rem);   /* Hero */
+  --leading-tight: 1.15;
+  --leading-normal: 1.6;
+
+  /* Spacing */
+  --space-1: 0.5rem;
+  --space-2: 1rem;
+  --space-3: 1.5rem;
+  --space-4: 2.5rem;
+  --space-5: 4rem;
+  --space-6: 6.5rem;   /* Sektionsabstand */
+
+  /* Layout */
+  --max-width: 68rem;
+  --radius: 0.75rem;
+  --shadow: 0 2px 16px rgba(16, 34, 46, 0.07);
+}

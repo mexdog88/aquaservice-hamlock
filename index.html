@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Aquaservice Hamlock – Schwimmbadpersonal im Großraum München</title>
+  <meta name="description" content="Flexible Rettungsschwimmer und Badpersonal für Bäderbetriebe im Umkreis von 100 km um Fürstenfeldbruck. Ab einzelnen Schichten, ohne langfristige Verpflichtung.">
+  <link rel="stylesheet" href="css/tokens.css">
+  <link rel="stylesheet" href="css/styles.css">
+  <script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
+</head>
+<body>
+
+  <!-- 1. Hero -->
+  <section class="hero">
+    <div class="container">
+      <h1>Schichtlücke im Bad? Morgen steht jemand am Becken.</h1>
+      <p class="subline">Flexible Rettungsschwimmer und Badpersonal für Bäderbetriebe im Großraum München – ab einzelnen Schichten, ohne langfristige Verpflichtung.</p>
+      <div class="cta-row">
+        <a class="btn" href="#kontakt">Bedarf melden</a>
+        <a class="link-phone" href="tel:+490000000000">Direkt anrufen: 0000&nbsp;000&nbsp;0000</a>
+      </div>
+      <p class="trust">DRSA Silber&ensp;·&ensp;Erste-Hilfe-Nachweis&ensp;·&ensp;Einsatzbereit im Umkreis von 100&nbsp;km um Fürstenfeldbruck</p>
+    </div>
+  </section>
+
+  <!-- 2. Problem -->
+  <section class="problem">
+    <div class="container">
+      <h2>Die Lage kennen Sie.</h2>
+      <div class="cards">
+        <div class="card">
+          <h3>Dienstplanlücken</h3>
+          <p>Überstunden fürs Stammpersonal oder reduzierte Öffnungszeiten – beides kostet Sie Betrieb und Vertrauen.</p>
+        </div>
+        <div class="card">
+          <h3>Kurzfristige Ausfälle</h3>
+          <p>Krankheit oder Diensttausch bedeuten Stunden an Organisation – oft am selben Morgen.</p>
+        </div>
+        <div class="card">
+          <h3>Aufsichtspflicht</h3>
+          <p>Die Wasseraufsicht muss besetzt sein. Ohne qualifiziertes Personal steht der Betrieb.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 3. Leistungen -->
+  <section class="services">
+    <div class="container">
+      <h2>Personal, wenn Sie es brauchen.</h2>
+      <div class="cards">
+        <div class="card">
+          <h3>Rettungsschwimmer/innen</h3>
+          <p>Gültiges DRSA Silber und Erste-Hilfe-Nachweis – einsatzbereit für die Wasseraufsicht.</p>
+        </div>
+        <div class="card">
+          <h3>Badpersonal</h3>
+          <p>Unterstützung im laufenden Betrieb – von der Aufsicht bis zur Gästebetreuung.</p>
+        </div>
+        <div class="card">
+          <h3>Flexible Einsätze</h3>
+          <p>Einzelne Schicht, Urlaubsvertretung oder ganze Saison. Kosten nur bei tatsächlichem Einsatz.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 4. Ablauf -->
+  <section class="steps">
+    <div class="container">
+      <h2>Ein Anruf genügt.</h2>
+      <div class="cards">
+        <div class="card">
+          <span class="step-number">1</span>
+          <h3>Bedarf melden</h3>
+          <p>Telefon oder Formular – auch kurzfristig.</p>
+        </div>
+        <div class="card">
+          <span class="step-number">2</span>
+          <h3>Wir organisieren</h3>
+          <p>Passendes, qualifiziertes Personal für Ihre Schicht.</p>
+        </div>
+        <div class="card">
+          <span class="step-number">3</span>
+          <h3>Einsatz läuft</h3>
+          <p>Sie zahlen nur, was tatsächlich geleistet wird.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 5. Über -->
+  <section class="about">
+    <div class="container">
+      <h2>Der Gründer steht selbst am Becken.</h2>
+      <blockquote>
+        Ich vermittle nicht nur – ich bin selbst operativ im Einsatz und übernehme bei Bedarf persönlich Schichten. So weiß ich, was am Beckenrand zählt, und stehe für die Qualität jedes Einsatzes gerade.
+      </blockquote>
+      <p class="signature">Jesse-James Hamlock, Gründer</p>
+      <!-- TODO: authentisches Porträtfoto am Becken einfügen (assets/) -->
+    </div>
+  </section>
+
+  <!-- 6. Kontakt -->
+  <section class="contact" id="kontakt">
+    <div class="container">
+      <h2>Melden Sie Ihren Bedarf.</h2>
+      <p style="margin-bottom: var(--space-3); color: var(--color-ink-soft);">Unverbindlich. Rückmeldung noch am selben Tag.</p>
+      <form id="kontakt-form" action="/api/contact" method="post">
+        <div>
+          <label for="bad">Bad / Einrichtung</label>
+          <input type="text" id="bad" name="bad" required>
+        </div>
+        <div>
+          <label for="name">Name</label>
+          <input type="text" id="name" name="name" required>
+        </div>
+        <div>
+          <label for="kontaktdaten">Telefon oder E-Mail</label>
+          <input type="text" id="kontaktdaten" name="kontaktdaten" required>
+        </div>
+        <div>
+          <label for="nachricht">Wann brauchen Sie Unterstützung? (optional)</label>
+          <textarea id="nachricht" name="nachricht" rows="3"></textarea>
+        </div>
+        <!-- Cloudflare Turnstile – Sitekey nach Cloudflare-Setup einsetzen -->
+        <div class="cf-turnstile" data-sitekey="TURNSTILE_SITEKEY_HIER"></div>
+        <button class="btn" type="submit">Anfrage senden</button>
+        <p id="form-status" role="status"></p>
+      </form>
+      <script>
+        document.getElementById('kontakt-form').addEventListener('submit', async (e) => {
+          e.preventDefault();
+          const form = e.target;
+          const status = document.getElementById('form-status');
+          status.textContent = 'Wird gesendet …';
+          try {
+            const res = await fetch('/api/contact', {
+              method: 'POST',
+              body: new FormData(form),
+            });
+            if (res.ok) {
+              form.reset();
+              if (window.turnstile) turnstile.reset();
+              status.textContent = 'Danke! Ihre Anfrage ist eingegangen – wir melden uns noch heute.';
+            } else {
+              status.textContent = 'Senden fehlgeschlagen. Rufen Sie uns gerne direkt an.';
+            }
+          } catch {
+            status.textContent = 'Senden fehlgeschlagen. Rufen Sie uns gerne direkt an.';
+          }
+        });
+      </script>
+      <p class="direct">Oder direkt: <a class="link-phone" href="tel:+490000000000">0000&nbsp;000&nbsp;0000</a> · <a class="link-phone" href="mailto:kontakt@example.de">kontakt@example.de</a></p>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container">
+      <span>© 2026 Jesse-James Hamlock · Einsatzgebiet: Großraum München / Oberbayern</span>
+      <span><a href="#">Impressum</a> · <a href="#">Datenschutz</a></span>
+    </div>
+  </footer>
+
+</body>
+</html>
