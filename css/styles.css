@@ -332,6 +332,41 @@ h2 {
     url("../assets/wasser-textur.jpg") center / cover;
 }
 
+.about-grid {
+  display: grid;
+  grid-template-columns: 1.4fr 1fr;
+  gap: var(--space-4, 3rem);
+  align-items: center;
+}
+
+.about-photo {
+  margin: 0;
+}
+
+.about-photo img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 12px;
+  box-shadow: 0 12px 32px rgba(0, 40, 60, 0.18);
+}
+
+@media (max-width: 768px) {
+  .about-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .about-photo {
+    max-width: 420px;
+  }
+}
+
+.about .about-intro {
+  max-width: 58ch;
+  margin-bottom: var(--space-3);
+  color: var(--color-ink-soft);
+}
+
 .about blockquote {
   max-width: 58ch;
   font-size: var(--text-lg);
